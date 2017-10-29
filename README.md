@@ -15,7 +15,7 @@ user --> apache httpd --> tomcat1 --> mysql
     ansible-playbook --user ubuntu -i hosts --ask-pass site.yml -vvvv --ask-become-pass 
          
          
--- If you want to just start apache and tomcat use follwoing command :
+-- If you just want to restart apache and tomcat use follwoing command :
 
     ansible-playbook --user ubuntu -i hosts --ask-pass site.yml -vvvv --ask-become-pass --tags start
      
