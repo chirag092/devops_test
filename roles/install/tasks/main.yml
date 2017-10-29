@@ -1,0 +1,19 @@
+- name: download tomcat 
+  apt: name=tomcat7 update_cache=yes state=present
+  become: yes 
+  become_user: root
+
+- name: download apache2
+  apt: name=apache2 state=latest
+  become: yes
+  become_user: root
+
+- name: download mod-jk
+  apt: name=libapache2-mod-jk state=latest
+  become: yes
+  become_user: root
+
+- name: download mysql-server
+  apt: name=mysql-server state=latest
+  become: yes
+  become_user: root
